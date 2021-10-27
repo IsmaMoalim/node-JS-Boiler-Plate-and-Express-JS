@@ -1,5 +1,5 @@
 let express = require('express');
-let httpStatus = require('http-status')
+let status = require('http-status')
 require('dotenv').config({path:'../dev.env'})
 let app = express();
 let port = process.env.PORT;
@@ -16,7 +16,6 @@ app.use(morganmiddleware)
 app.use('/v1', catalog);
 app.use(cors())
 app.use(helmet())
-
 
 app.use((req,res,next) =>{
 
