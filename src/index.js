@@ -32,7 +32,7 @@ app.use((err, req, res, next) => {
 })
 
 
-app.listen(3001, (req,res) =>{
+app.listen(port, (req,res) =>{
 
     console.log('This app is running on port '+port);
 
