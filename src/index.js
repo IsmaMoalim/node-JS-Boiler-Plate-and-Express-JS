@@ -1,8 +1,8 @@
 let express = require('express');
 let status = require('http-status')
-require('dotenv').config({path:'../dev.env'})
+require('dotenv').config()
 let app = express();
-let port = 3001;
+let port = process.env.PORT;
 let catalog =  require('./route/v1/catalog')
 let bodyparser = require('body-parser');
 app.use(bodyparser.json());
@@ -34,6 +34,6 @@ app.use((err, req, res, next) => {
 
 app.listen(port, (req,res) =>{
 
-    console.log('This app is running on port '+port);
+    console.log('This app is running on '+process.env.LOCAL_HOST+process.env.PORT);
 
 });
