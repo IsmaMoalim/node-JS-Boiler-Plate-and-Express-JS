@@ -28,7 +28,7 @@ app.use((req,res,next) =>{
 
 // All error handaling exceptions
 app.use((err, req, res, next) => {
-    res.status(status.err).send(err)
+    res.status(401).send(err)
 })
 
 
