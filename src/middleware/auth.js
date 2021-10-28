@@ -9,6 +9,7 @@ const auth = (req, res, next) =>{
     const token = bearerHeader.split(' ')[1];
         console.log("AccessToken is :"+token);
     if (!token) {
+        console.log(token);
         throw new ApiError(403,"Your authentication is forbiden")
     }
     
